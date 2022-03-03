@@ -1,24 +1,22 @@
 package tracker.menu;
 
 import tracker.DataStore;
-import tracker.Message;
+import tracker.text.Message;
 import tracker.Student;
 import tracker.input.CredentialChecker;
 
-import static tracker.Message.*;
+import static tracker.text.Message.*;
 import static tracker.input.InputMenu.parseInput;
 
 public class AddStudents implements MenuStatus{
     @Override
     public void run() {
         printMessage(ADD_STUDENT);
-
+        int countAddedStudents = 0;
         while (true) {
-            int countAddedStudents = 0;
             String userInput = parseInput();
             // enter back to leave add students
             if(userInput.equals("back")) {
-                printFormatMessageWithInt(Message.ADD_STUDENT_SUCCESS_TOTAL, countAddedStudents);
                 break;
             }
             // Check the Format of the input and return a new Student
@@ -31,6 +29,7 @@ public class AddStudents implements MenuStatus{
                 } else printMessage(Message.EMAIL_TAKEN);
             }
         }
+        printFormatMessageWithInt(Message.ADD_STUDENT_SUCCESS_TOTAL, countAddedStudents);
     }
 }
 

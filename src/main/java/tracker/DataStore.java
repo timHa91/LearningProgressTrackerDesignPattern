@@ -1,12 +1,23 @@
 package tracker;
 
-import java.util.*;
+import tracker.course.CourseInfo;
+import tracker.text.Message;
 
-import static tracker.Message.printMessage;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static tracker.text.Message.printMessage;
 
 public class DataStore {
 
     private static Map<String, Student> students = new HashMap<>();
+
+    private static CourseInfo java = CourseInfo.JAVA_INFO;
+    private static CourseInfo dsa = CourseInfo.DSA_INFO;
+    private static CourseInfo db = CourseInfo.DATABASE_INFO;
+    private static CourseInfo spring = CourseInfo.SPRING_INFO;
+    public static List<CourseInfo> courses = Arrays.asList(java, dsa, db, spring);
+
 
     public static boolean addStudentToDataStore(Student newStudent) {
         if(!checkIfEmailAlreadyInUse(newStudent.getEmail())){
@@ -43,4 +54,5 @@ public class DataStore {
 
     public static boolean checkIfIdExists(String id) {return students.containsKey(id);}
     public static Student getStudentFromId(String id) {return students.get(id);}
+
 }

@@ -1,9 +1,5 @@
 package tracker.menu;
 
-import tracker.Message;
-
-import static tracker.Message.printMessage;
-
 public class Menu {
     MenuStatus menuStatus;
     public void printMenu(String userInput) {
@@ -27,6 +23,7 @@ public class Menu {
             case "list":
                 setMenuStatus(new ListStudents());
                 runStatus();
+                break;
             case "find":
                 setMenuStatus(new FindStudents());
                 runStatus();

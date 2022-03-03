@@ -1,8 +1,8 @@
 package tracker.menu;
 
-import tracker.Message;
+import tracker.text.Message;
 
-import static tracker.Message.printMessage;
+import static tracker.text.Message.printMessage;
 
 public class Back implements MenuStatus{
     @Override

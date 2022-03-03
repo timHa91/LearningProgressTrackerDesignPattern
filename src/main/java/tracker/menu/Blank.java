@@ -1,6 +1,6 @@
 package tracker.menu;
 
-import static tracker.Message.*;
+import static tracker.text.Message.*;
 
 public class Blank implements MenuStatus{
     @Override

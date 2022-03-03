@@ -1,10 +1,10 @@
 package tracker.input;
 
 import tracker.DataStore;
-import tracker.Message;
+import tracker.text.Message;
 
-import static tracker.Message.*;
-import static tracker.Message.printMessage;
+import static tracker.text.Message.*;
+import static tracker.text.Message.printMessage;
 
 public class PointsChecker {
     public static String[] checkPointsInput(String inputPoints) {
@@ -16,7 +16,8 @@ public class PointsChecker {
         }
         // Check if ID exists
         if(!DataStore.checkIfIdExists(inputParts[0])){
-            printFormatMessageWithString(STUDENT_NOT_FOUND_WITH_ID + "\n", inputParts[0]);
+            printFormatMessageWithString(STUDENT_NOT_FOUND_WITH_ID, inputParts[0]);
+            System.out.println("");
             return null;
         }
         // Check if every number has valid format

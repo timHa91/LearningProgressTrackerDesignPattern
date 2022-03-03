@@ -2,7 +2,7 @@ package tracker;
 
 import tracker.menu.Menu;
 
-import static tracker.Message.*;
+import static tracker.text.Message.*;
 import static tracker.input.InputMenu.*;
 
 public class Tracker {

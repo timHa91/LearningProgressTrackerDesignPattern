@@ -1,9 +1,9 @@
 package tracker.menu;
 
 import tracker.DataStore;
-import tracker.Message;
+import tracker.text.Message;
 
-import static tracker.Message.*;
+import static tracker.text.Message.*;
 import static tracker.input.InputMenu.parseInput;
 import static tracker.input.PointsChecker.checkPointsInput;
 

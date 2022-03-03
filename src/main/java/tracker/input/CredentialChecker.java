@@ -1,12 +1,12 @@
 package tracker.input;
 
-import tracker.Message;
+import tracker.text.Message;
 import tracker.Student;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static tracker.Message.printMessage;
+import static tracker.text.Message.printMessage;
 
 public class CredentialChecker {
 

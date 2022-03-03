@@ -1,4 +1,4 @@
-package tracker;
+package tracker.text;
 
 public class Message {
 
@@ -17,7 +17,7 @@ public class Message {
     public static final String EMAIL_TAKEN = "This email is already taken.";
     public static final String ADD_POINTS = "Enter an id and points or 'back' to return";
     public static final String STUDENT_NOT_FOUND = "No students found.";
-    public static final String STUDENT_NOT_FOUND_WITH_ID = "No student is found for id=%s";
+    public static final String STUDENT_NOT_FOUND_WITH_ID = "No student is found for id=%s\n";
     public static final String ADD_POINTS_INVALID_FORMAT = "Incorrect points format";
     public static final String ADD_POINTS_SUCCESS = "Points updated";
     public static final String FIND = "Enter an id or 'back' to return:";
